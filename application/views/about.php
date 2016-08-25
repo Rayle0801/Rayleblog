@@ -5,7 +5,7 @@ spl_autoload_register(function($class){
 
 # Get Markdown class
 $Parsedown = new Parsedown();
-$html = $Parsedown->text($about[0]['content']);
+$html = $Parsedown->text($abouts[0]['content']);
 
 # Read file and pass content through the Markdown parser
 
@@ -14,12 +14,12 @@ $html = $Parsedown->text($about[0]['content']);
 <div class="container col-sm-8 col-sm-offset-2" style="background-color: #FFF;margin-top:20px;padding-top:1px;border-radius: 8px;box-shadow:5px 5px 8px #DDDDDD,-5px -5px 8px #DDDDDD;">
 <div class="article" style="padding-top:10px;padding-bottom:50px;">
       <h2 class="text-center">
-        <?php echo $about[0]['title'];?>
+        <?php echo $abouts[0]['title'];?>
       </h2>
       <center>
         <p>
           <small class="text-muted">
-          	<?php echo $about[0]['tag']; ?>
+          	<?php echo $abouts[0]['tag']; ?>
           </small>
         </p>
          <hr>

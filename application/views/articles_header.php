@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title><?php echo $article[0]['title'];?> - powered by ryaleblog</title>
-  <meta name="keywords" content="<?php if(isset($article[0]['keyword']))echo $article[0]['keyword'];?>" />
-  <meta name="description" content="<?php if(isset($article[0]['description']))echo $article[0]['description'];?>" />
-  <meta name="generator" content="startblog v1.1" />
-  <meta name="author" content="https://github.com/cryin/startblog" />
+  <title><?php echo $articles[0]['title'];?> - powered by ryaleblog</title>
+  <meta name="keywords" content="<?php if(isset($articles[0]['keyword']))echo $articles[0]['keyword'];?>" />
+  <meta name="description" content="<?php if(isset($articles[0]['description']))echo $articles[0]['description'];?>" />
+  <meta name="generator" content="rayleblog v1.0" />
+  <meta name="author" content="https://github.com/Rayle0801/Rayleblog" />
 
   <link rel="stylesheet" href="<?php echo base_url('/static/css/bootstrap.min.css')?>">
   <link rel="stylesheet" href="<?php echo base_url('/static/css/github-markdown.css')?>">

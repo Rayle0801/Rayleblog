@@ -10,23 +10,22 @@ spl_autoload_register(function($class){
 #$html = MarkdownExtra::defaultTransform($article[0]['content']);
 
 $Parsedown = new Parsedown();
-$html = $Parsedown->text($article[0]['content']);
-
+$html = $Parsedown->text($articles[0]['content']);
 ?>
   <div class="col-sm-8 col-sm-offset-2"  style="background-color: #FFF;margin-top:20px;border-radius: 8px;box-shadow:5px 5px 8px #DDDDDD,-5px -5px 8px #DDDDDD;">
     <div class="article" style="padding-top:50px;padding-bottom:50px;">
       <h2 class="text-center">
-        <?php echo $article[0]['title'];?>
+        <?php echo $articles[0]['title'];?>
       </h2>
       <center>
         <p>
           <small class="text-muted">
-            <?php $category_id = $article[0]['category'];$category_name = $all_category["$category_id"]['category'];?>
-                分类&nbsp<?php echo anchor("Category/show/{$category_id}","$category_name","")?> &nbsp&nbsp|&nbsp&nbsp<?php echo date('Y年m月d日',strtotime($article[0]['published_at']));?>&nbsp&nbsp|&nbsp&nbsp阅读：<?php echo $article[0]['pv'];?>次
+            <?php $category_id = $articles[0]['category'];$category_name = $all_category["$category_id"]['category'];?>
+                分类&nbsp<?php echo anchor("Category/show/{$category_id}","$category_name","")?> &nbsp&nbsp|&nbsp&nbsp<?php echo date('Y年m月d日',strtotime($articles[0]['published_at']));?>&nbsp&nbsp|&nbsp&nbsp阅读：<?php echo $articles[0]['pv'];?>次
           </small>
         </p>
-        <?php if(isset($article[0]['tag'])):?>
-          <?php foreach ($article[0]['tag'] as $key => $value):?>
+        <?php if(isset($articles[0]['tag'])):?>
+          <?php foreach ($articles[0]['tag'] as $key => $value):?>
             <?php echo anchor("/Tag/show/{$key}","<button type='button' class='btn btn-{$button_type["$value"]} btn-xs'>{$value}</button>","");?>
           <?php endforeach?>
         <?php endif?>
@@ -37,7 +36,7 @@ $html = $Parsedown->text($article[0]['content']);
         </article>
     </div>     
     <!-- <hr style="height:1px;border:none;border-top:3px dashed #DDD;"> -->
-    <div class="ds-thread" data-thread-key="<?php echo $article[0]['id'];?>" data-title="<?php echo $article[0]['title'];?>" data-url="<?php echo base_url("/Articles/article/{$article[0]['id']}");?>"></div>
+    <div class="ds-thread" data-thread-key="<?php echo $articles[0]['id'];?>" data-title="<?php echo $articles[0]['title'];?>" data-url="<?php echo base_url("/Articles/article/{$articles[0]['id']}");?>"></div>
   <!-- 多说评论框 start -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">

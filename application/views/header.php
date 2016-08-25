@@ -9,7 +9,7 @@
   <meta name="keywords" content="<?php if(isset($value['keywords']))echo $value['keywords'];?>" />
   <meta name="description" content="<?php if(isset($value['description']))echo $value['description'];?>" />
   <meta name="generator" content="rayleblog v1.3" />
-  <meta name="author" content="https://github.com/cryin/startblog" />
+  <meta name="author" content="https://github.com/Rayle0801/Rayleblog" />
 
   <link rel="stylesheet" href="<?php echo base_url('/static/css/bootstrap.min.css')?>">
   <link rel="stylesheet" href="<?php echo base_url('/static/css/github-markdown.css')?>">

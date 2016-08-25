@@ -128,4 +128,8 @@ $autoload['language'] = array();
 */
 $autoload['model'] = array(
     'articlesmodel',
+    'categorymodel',
+    'siteinfomodel',
+    'aboutmodel',
+    'tagmodel',
     );
