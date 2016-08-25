@@ -53,9 +53,9 @@ Class Articles extends CI_Controller
             $this->session->set_userdata($user_ip);
         }
 
-        $data_tmmp['articles']  = $this->articlesmodel->getArticle($id);
+        $data_tmp['articles']  = $this->articlesmodel->getArticle($id);
         $tag_info               = $this->articlesmodel->getTagsType();
-        foreach ($data_tmmp as $key => $value) {
+        foreach ($data_tmp as $key => $value) {
             foreach ($value as $value1) {
                 $data['articles']['0']['id']             = $value1['id'];
                 $data['articles']['0']['title']          = $value1['title'];
@@ -84,16 +84,16 @@ Class Articles extends CI_Controller
 
         foreach ($tag_info['button_type'] as $value) {
             $tag_name                   = $value['tag_name'];
-            $button_type['tag_name']    = $value['tag_button_type'];
+            $button_type["$tag_name"]   = $value['tag_button_type'];
         }
-        $data['button_type']        = $button_type;
+        $data['button_type']         = $button_type;
         $data['categorys']           = $this->categorymodel->getAllCategory();
 
-        $data['title']              = array('active', '', '', '');
-      
+        $data['title']               = array('active', '', '', '');
+
         $this->load->view('articles_header', $data);
         $this->load->view('menu', $data);
-        $this->load->view('articles_index', $data);
+        $this->load->view('articles_article', $data);
         $this->load->view('footer');
 
     }

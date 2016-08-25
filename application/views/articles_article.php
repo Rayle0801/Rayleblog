@@ -11,6 +11,7 @@ spl_autoload_register(function($class){
 
 $Parsedown = new Parsedown();
 $html = $Parsedown->text($articles[0]['content']);
+
 ?>
   <div class="col-sm-8 col-sm-offset-2"  style="background-color: #FFF;margin-top:20px;border-radius: 8px;box-shadow:5px 5px 8px #DDDDDD,-5px -5px 8px #DDDDDD;">
     <div class="article" style="padding-top:50px;padding-bottom:50px;">
@@ -20,7 +21,7 @@ $html = $Parsedown->text($articles[0]['content']);
       <center>
         <p>
           <small class="text-muted">
-            <?php $category_id = $articles[0]['category'];$category_name = $all_category["$category_id"]['category'];?>
+            <?php $category_id = $articles[0]['category'];$category_name = $categorys["$category_id"]['category'];?>
                 分类&nbsp<?php echo anchor("Category/show/{$category_id}","$category_name","")?> &nbsp&nbsp|&nbsp&nbsp<?php echo date('Y年m月d日',strtotime($articles[0]['published_at']));?>&nbsp&nbsp|&nbsp&nbsp阅读：<?php echo $articles[0]['pv'];?>次
           </small>
         </p>

@@ -8,10 +8,8 @@ $Parsedown = new Parsedown();
 
 # Read file and pass content through the Markdown parser
 foreach ($articles as $key => $value) {
-  $data[$key]['content'] = substr($Parsedown->text($value['content']), 0, 450);
+  $articles[$key]['content'] = substr($Parsedown->text($value['content']), 0, 450);
 }
-
-
 ?>
     
       <?php foreach ($articles as $key => $value): ?>
