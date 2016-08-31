@@ -55,3 +55,4 @@ $route['translate_uri_dashes'] = FALSE;
 
 
 $route['article/(:num)']           = 'Articles/artilce/$1';
+

@@ -10,13 +10,13 @@
 	<ul class="server-list">
 
 			<h3></h3>
-			<p><b>Startblog version:</b><?php echo "Startblog v1.4";?></p>
+			<p><b>Rayelblog version:</b><?php echo "Rayelblog v1.0";?></p>
             <p><b>PHP version:</b><?php echo PHP_VERSION;?></p>
             <p><b>OS type：</b> <?PHP echo PHP_OS; ?></p>
             <p><b>Web server：</b> <?php echo $_SERVER['SERVER_SOFTWARE'];?></p>
             <p><b>Client IP:</b><?php echo  $_SERVER["REMOTE_ADDR"];?></p>
             <p><b>Server time：</b><?php echo date("Y-m-d H:i:s",time());?></p>
-            <p><b>Github:</b><?php echo "https://github.com/Cryin/Startblog";?></p>
+            <p><b>Github:</b><?php echo "https://github.com/Rayle0801/Rayleblog";?></p>
 	</ul>
 </div>
 </div>

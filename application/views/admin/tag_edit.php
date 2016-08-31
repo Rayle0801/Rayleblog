@@ -5,8 +5,8 @@
      <li class="active"><button type='button' class='btn btn-<?php echo $tag_info[0]['tag_button_type']?> btn-md'><?php echo $tag_info[0]['tag_name']?></button></li>
     </ol>
         <?php foreach ($articles_by_tag as $key => $value): ?>
-            <blockquote style="background-color: #FFF;margin-top:20px;border-radius: 8px;box-shadow:5px 5px 8px #DDDDDD;"><a href='#' data-toggle="modal" data-target="#myModal-<?php echo $value['id']?>"><h2><?php echo $value['title']?></h2></a><small>分类于<strong><?php echo $all_category[$value['category']]['category']?></strong> | <?php echo $value['published_at'];?></small></blockquote>
-
+             <blockquote style="background-color: #FFF;margin-top:20px;border-radius: 8px;box-shadow:5px 5px 8px #DDDDDD;"><a href='#' data-toggle="modal" data-target="#myModal-<?php echo $value['id']?>"><h2><?php echo $value['title']?></h2></a><small>分类于<strong><?php echo $all_category[$value['category']]['category']?></strong> | <?php echo $value['published_at'];?></small></blockquote>
+             
           <div class="modal fade" id='myModal-<?php echo $value['id']?>' tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
               <div class="modal-dialog" role="document" style="width:400px">
                 <div class="modal-content">
