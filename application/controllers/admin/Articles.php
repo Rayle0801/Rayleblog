@@ -79,12 +79,12 @@ class Articles extends CI_Controller
         $tag_arr    = explode(',', $data['data']['tag']);
 
         //比较输入内容与原文标签的不同
-        $dff        = array_merge(array_diff($article_tag, $tag_arr), array_diff($tag_arr, $article_tag));
+        $diff        = array_merge(array_diff($article_tag, $tag_arr), array_diff($tag_arr, $article_tag));
 
         //获取所有标签信息
         $all_tags   = $this->tagmodel->getAllTags();
         foreach ($all_tags as $key => $value) {
-            $all_tags_name  = $value['tag_name'];
+            $all_tags_name[]  = $value['tag_name'];
         }
 
         //判断用户输入的标签是否存在，如果不存在，创建标签， 并随机选择一个颜色
@@ -114,19 +114,19 @@ class Articles extends CI_Controller
                     $insert_link    = $this->db->query($sql3)->result_array();
 
                     $sql4   = "insert into article_tag(article_id, tag_id) values ({$insert_link['0']['article_id']},{$insert_link['0']['tag_id']})";
-                    $this->db->quert($sql4);
+                    $this->db->query($sql4);
                 }
             }
             $this->db->where('id', $data['data']['id']);
-            $this->db->replace('article', $data['data']);
+            $this->db->replace('articles', $data['data']);
         } else {
             $this->db->insert('articles', $data['data']);
 
             foreach ($diff as $key => $value) {
-                $sql5   = "select b.id as article_id,c_id as tag_id from articles as b join tag as c where b.title='{$data['data']['title']}' and c.tag_name='{$value}'";
+                $sql5   = "select b.id as article_id,c.id as tag_id from articles as b join tag as c where b.title='{$data['data']['title']}' and c.tag_name='{$value}'";
                 $insert_link    = $this->db->query($sql5)->result_array();
 
-                $sql6   = "insert into article_tag(artcile_id, tag_id) values ({$insert_link['0']['article_id']}, {$insert_link['0']['tag_id']})";
+                $sql6   = "insert into article_tag(article_id, tag_id) values ({$insert_link['0']['article_id']}, {$insert_link['0']['tag_id']})";
                 $this->db->query($sql6);
             }
         }

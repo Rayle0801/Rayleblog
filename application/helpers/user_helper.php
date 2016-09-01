@@ -10,7 +10,8 @@ if (!function_exists('checkLogin')){
 		$username = $ci->session->userdata('username');
 		if ($d = 'admin' && $c = 'Index' && $m !='login'){
 			if (empty($username)){
-				redirect('admin/Index/login?back_url='.uri_string());
+				// redirect('admin/Index/login?back_url='.uri_string());
+				redirect('admin/Index/login');
 			}
 		}
 

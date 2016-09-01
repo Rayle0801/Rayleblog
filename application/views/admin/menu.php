@@ -4,7 +4,7 @@
           <div class="col-xs-13">
             <ul class="nav nav-pills" style="line-height: 25px;">
               <li class="logo"/><a href="<?php echo base_url()?>"><img src="<?php echo base_url('/static/img/title.png')?>" width=170 height="25"> </a></li>
-             <li class="<?php echo $cur_title[0];?>"><?php echo anchor("admin/index","主页","")?></li>
+             <li class="<?php echo $cur_title[0];?>"><?php echo anchor("admin/Index/show","主页","")?></li>
              <li class="dropdown <?php echo $cur_title[1];?>">
               <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                 文章 <span class="caret"></span>
@@ -55,7 +55,7 @@
         <h4 class="modal-title" id="myModalLabel">提示</h4>
       </div>
       <div class="modal-body text-center">
-        确定退出startblog管理么？
+        确定退出<?php echo $user ?>管理么？
       </div>
       <div class="modal-footer">
         <?php echo anchor('admin/Index/logout','<button type="button" class="btn btn-primary">退出</button>')?>

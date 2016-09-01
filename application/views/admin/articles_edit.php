@@ -12,7 +12,7 @@
 
       <div class="form-group">
         <label for="content">内容</label>
-        <textarea class="form-control" rows="21" id="textcontent" name="content" placeholder="请输入内容" required><?php if(isset($article['0']['content'])) echo htmlspecialchars($article['0']['content']); else echo("#hello startblog")?></textarea>
+        <textarea class="form-control" rows="21" id="textcontent" name="content" placeholder="请输入内容" required><?php if(isset($article['0']['content'])) echo htmlspecialchars($article['0']['content']); else echo("#hello rayleblog")?></textarea>
       </div>
 
 

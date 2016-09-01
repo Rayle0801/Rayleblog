@@ -3,7 +3,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>startblog登录</title>
+  <title>rayleblog登录</title>
    <link rel="stylesheet" href="http://apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap.min.css">
    <script src="http://apps.bdimg.com/libs/bootstrap/3.3.0/js/bootstrap.min.js"></script>
    <script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -33,10 +33,11 @@
             记住我的登录信息 </label>
         </div>
         <button class="btn btn-lg btn-primary btn-block" type="submit" name='subimit' value="subimit">登录</button>
+        <a href="<?php echo base_url('admin/Index/register')?>" class="btn btn-lg btn-primary btn-block">注册</a>
       </form>
    </div>
 </div>
-<p class="pull-right" style="">Powered by startblog &copy; 2016 version 1.4</p>
+<p class="pull-right" style="">Powered by rayleblog &copy; 2016 version 1.0</p>
     </div>
   </div>
 
